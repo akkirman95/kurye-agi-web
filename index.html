@@ -1,0 +1,820 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#236247">
+  <meta name="robots" content="noindex,nofollow">
+
+  <title>Mahalleden Kurye Ağı | Yerel Teslimat Ağı</title>
+
+  <meta
+    name="description"
+    content="Yerel işletmeleri ve bağımsız kuryeleri planlı, izlenebilir bir teslimat ağında buluşturuyoruz."
+  >
+
+  <link rel="canonical" href="https://mahalledensofrana.com.tr/">
+
+  <style>
+    :root {
+      --cream: #f8f3ea;
+      --paper: #fffdf9;
+      --orange: #ef5a2a;
+      --green: #236247;
+      --dark: #28231f;
+      --muted: #6c625b;
+      --line: #e8ddce;
+      --shadow: 0 22px 60px rgba(40, 35, 31, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--dark);
+      background: var(--cream);
+      font-family: Manrope, Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .wrap {
+      width: min(1120px, calc(100% - 36px));
+      margin: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid rgba(232, 221, 206, 0.8);
+      background: rgba(248, 243, 234, 0.92);
+      backdrop-filter: blur(14px);
+    }
+
+    nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      text-decoration: none;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+    }
+
+    .mark {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border: 3px solid var(--green);
+      border-radius: 14px;
+      color: var(--orange);
+      background: #fff;
+      font-size: 20px;
+    }
+
+    .brand small {
+      display: block;
+      color: var(--green);
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .brand span {
+      font-size: 18px;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 750;
+    }
+
+    .menu .pill {
+      padding: 11px 17px;
+      border-radius: 999px;
+      color: white;
+      background: var(--green);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 86px 0 74px;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      right: -180px;
+      top: -210px;
+      border: 42px solid rgba(35, 98, 71, 0.08);
+      border-radius: 50%;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      align-items: center;
+      gap: 64px;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 850;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 4px;
+      border-radius: 4px;
+      background: var(--orange);
+    }
+
+    h1 {
+      max-width: 700px;
+      margin: 0;
+      font-size: clamp(48px, 7vw, 78px);
+      line-height: 0.99;
+      letter-spacing: -0.06em;
+    }
+
+    h1 em {
+      color: var(--orange);
+      font-style: normal;
+    }
+
+    .lead {
+      max-width: 640px;
+      margin: 26px 0 0;
+      color: var(--muted);
+      font-size: clamp(18px, 2vw, 21px);
+      line-height: 1.55;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .btn {
+      min-height: 52px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 23px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 850;
+    }
+
+    .primary {
+      color: #fff;
+      background: var(--orange);
+      box-shadow: 0 12px 28px rgba(239, 90, 42, 0.22);
+    }
+
+    .secondary {
+      border-color: var(--green);
+      color: var(--green);
+    }
+
+    .note {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .map {
+      position: relative;
+      min-height: 470px;
+      padding: 30px;
+      overflow: hidden;
+      border-radius: 34px;
+      color: white;
+      background: var(--green);
+      box-shadow: var(--shadow);
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 8px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .status i {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #ffc84a;
+      box-shadow: 0 0 0 6px rgba(255, 200, 74, 0.14);
+    }
+
+    .route {
+      position: relative;
+      height: 315px;
+      margin-top: 28px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 25px;
+      background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.08),
+        rgba(255, 255, 255, 0.02)
+      );
+    }
+
+    .route::before {
+      content: "";
+      position: absolute;
+      inset: 64px 44px 70px;
+      border: 3px dashed rgba(255, 255, 255, 0.4);
+      border-radius: 50% 42% 54% 44%;
+      transform: rotate(-8deg);
+    }
+
+    .node {
+      position: absolute;
+      display: grid;
+      place-items: center;
+      width: 58px;
+      height: 58px;
+      border-radius: 19px;
+      background: var(--paper);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.16);
+      font-size: 25px;
+    }
+
+    .n1 {
+      left: 9%;
+      top: 24%;
+      color: var(--orange);
+    }
+
+    .n2 {
+      right: 8%;
+      top: 12%;
+      color: var(--green);
+    }
+
+    .n3 {
+      right: 24%;
+      bottom: 8%;
+      color: var(--orange);
+    }
+
+    .n4 {
+      left: 24%;
+      bottom: 3%;
+      color: var(--green);
+    }
+
+    .map-copy {
+      position: absolute;
+      left: 30px;
+      right: 30px;
+      bottom: 26px;
+    }
+
+    .map-copy strong {
+      display: block;
+      font-size: 21px;
+    }
+
+    .map-copy span {
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 13px;
+    }
+
+    section {
+      padding: 82px 0;
+    }
+
+    .white {
+      background: var(--paper);
+    }
+
+    .section-head {
+      max-width: 720px;
+      margin-bottom: 36px;
+    }
+
+    .kicker {
+      color: var(--orange);
+      font-size: 13px;
+      font-weight: 850;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .section-head h2 {
+      margin: 10px 0 12px;
+      font-size: clamp(34px, 4vw, 52px);
+      line-height: 1.05;
+      letter-spacing: -0.045em;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 25px;
+      background: #fff;
+      box-shadow: 0 12px 34px rgba(40, 35, 31, 0.05);
+    }
+
+    .num {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 13px;
+      color: #fff;
+      background: var(--orange);
+      font-weight: 900;
+    }
+
+    .card h3 {
+      margin: 22px 0 9px;
+      font-size: 21px;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .audiences {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .panel {
+      padding: 34px;
+      border-radius: 30px;
+    }
+
+    .panel.business {
+      color: #fff;
+      background: var(--green);
+    }
+
+    .panel.courier {
+      border: 2px solid var(--orange);
+      background: var(--paper);
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 7px 11px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 850;
+      background: rgba(255, 255, 255, 0.13);
+    }
+
+    .courier .tag {
+      color: var(--orange);
+      background: #fdeee6;
+    }
+
+    .panel h3 {
+      margin: 20px 0 12px;
+      font-size: 30px;
+      letter-spacing: -0.035em;
+    }
+
+    .panel ul {
+      display: grid;
+      gap: 13px;
+      margin: 22px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .panel li {
+      display: flex;
+      gap: 10px;
+      line-height: 1.5;
+    }
+
+    .panel li::before {
+      content: "✓";
+      font-weight: 900;
+    }
+
+    .business li::before {
+      color: #ffc84a;
+    }
+
+    .courier li::before {
+      color: var(--orange);
+    }
+
+    .cta {
+      padding: 72px 0 90px;
+    }
+
+    .cta-box {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 34px;
+      padding: 44px;
+      border-radius: 34px;
+      color: white;
+      background: var(--dark);
+      box-shadow: var(--shadow);
+    }
+
+    .cta-box h2 {
+      margin: 0 0 10px;
+      font-size: clamp(32px, 4vw, 48px);
+      letter-spacing: -0.045em;
+    }
+
+    .cta-box p {
+      max-width: 650px;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.68);
+      line-height: 1.6;
+    }
+
+    .cta-box .btn {
+      white-space: nowrap;
+    }
+
+    footer {
+      padding: 28px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .foot {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .foot a {
+      color: var(--green);
+      font-weight: 750;
+    }
+
+    @media (max-width: 820px) {
+      .menu a:not(.pill) {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 58px;
+      }
+
+      .hero-grid,
+      .cta-box {
+        grid-template-columns: 1fr;
+      }
+
+      .map {
+        min-height: 420px;
+      }
+
+      .steps,
+      .audiences {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-box {
+        align-items: start;
+      }
+
+      .cta-box .btn {
+        justify-self: start;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .wrap {
+        width: min(100% - 26px, 1120px);
+      }
+
+      nav {
+        min-height: 68px;
+      }
+
+      .brand span {
+        font-size: 16px;
+      }
+
+      .menu .pill {
+        padding: 10px 13px;
+        font-size: 12px;
+      }
+
+      .hero {
+        padding: 48px 0 56px;
+      }
+
+      h1 {
+        font-size: 48px;
+      }
+
+      .actions {
+        display: grid;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .map {
+        min-height: 390px;
+        padding: 22px;
+      }
+
+      .map-copy {
+        left: 22px;
+        right: 22px;
+      }
+
+      .route {
+        height: 290px;
+      }
+
+      section {
+        padding: 62px 0;
+      }
+
+      .card,
+      .panel {
+        padding: 24px;
+      }
+
+      .cta-box {
+        padding: 28px;
+      }
+
+      .foot {
+        display: grid;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap">
+      <nav aria-label="Ana menü">
+        <a class="brand" href="#top">
+          <span class="mark">M</span>
+
+          <span>
+            <small>Mahalleden</small>
+            Kurye Ağı
+          </span>
+        </a>
+
+        <div class="menu">
+          <a href="#nasil">Nasıl çalışır?</a>
+          <a href="#kimler">Kimler için?</a>
+          <a class="pill" href="#basvuru">Pilota katıl</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Mahallene yakın, işine uygun</div>
+
+          <h1>
+            Teslimatı
+            <em>şansa bırakma.</em>
+          </h1>
+
+          <p class="lead">
+            Yerel işletmeleri ve bağımsız kuryeleri planlı, izlenebilir ve
+            büyüyebilir bir teslimat ağında buluşturuyoruz.
+          </p>
+
+          <div class="actions">
+            <a
+              class="btn primary"
+              href="mailto:destek@mahalledensofrana.com?subject=İşletme pilot başvurusu"
+            >
+              İşletme olarak başvur
+            </a>
+
+            <a
+              class="btn secondary"
+              href="mailto:destek@mahalledensofrana.com?subject=Kurye pilot başvurusu"
+            >
+              Kurye olarak katıl
+            </a>
+          </div>
+
+          <p class="note">
+            Pilot ağ için ön talepler toplanıyor. Katılım koşulları başvuru
+            sonrasında paylaşılır.
+          </p>
+        </div>
+
+        <div class="map" aria-label="Yerel teslimat ağı görselleştirmesi">
+          <span class="status">
+            <i></i>
+            Pilot ağ hazırlanıyor
+          </span>
+
+          <div class="route">
+            <span class="node n1">⌂</span>
+            <span class="node n2">●</span>
+            <span class="node n3">▣</span>
+            <span class="node n4">●</span>
+          </div>
+
+          <div class="map-copy">
+            <strong>Yakındaki işi, uygun kurye ile eşleştir.</strong>
+            <span>Daha düzenli operasyon, daha görünür teslimat.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="white" id="nasil">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Süreç</span>
+          <h2>Üç adımda yerel teslimat ağı</h2>
+          <p>
+            Talep oluşur, uygun kurye belirlenir ve teslimat süreci tek akışta
+            takip edilir.
+          </p>
+        </div>
+
+        <div class="steps">
+          <article class="card">
+            <span class="num">1</span>
+            <h3>Teslimat talebi oluşur</h3>
+            <p>
+              İşletme, teslimat adresini ve siparişe ilişkin gerekli bilgileri
+              sisteme iletir.
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="num">2</span>
+            <h3>Uygun kurye eşleşir</h3>
+            <p>
+              Konum ve müsaitlik bilgisine göre uygun kurye teslimatla
+              eşleştirilir.
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="num">3</span>
+            <h3>Süreç takip edilir</h3>
+            <p>
+              Teslimatın durumu işletme ve kurye tarafında görünür biçimde
+              ilerler.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="kimler">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">İki taraf, tek ağ</span>
+          <h2>İşletmeler ve bağımsız kuryeler için</h2>
+          <p>
+            Pilot dönemde gerçek saha ihtiyaçlarını birlikte öğrenen ve gelişen
+            bir yapı kuruyoruz.
+          </p>
+        </div>
+
+        <div class="audiences">
+          <article class="panel business">
+            <span class="tag">İşletmeler için</span>
+            <h3>Teslimat operasyonunu sadeleştir.</h3>
+
+            <ul>
+              <li>Yakındaki bağımsız kurye ağına erişim</li>
+              <li>Gönderi durumunu daha düzenli takip</li>
+              <li>Yoğun saatlerde esnek teslimat desteği</li>
+            </ul>
+          </article>
+
+          <article class="panel courier">
+            <span class="tag">Kuryeler için</span>
+            <h3>Yakınındaki teslimat fırsatlarını gör.</h3>
+
+            <ul>
+              <li>Müsaitliğine göre çalışma imkânı</li>
+              <li>Daha planlı teslimat akışı</li>
+              <li>Yerel işletmelerle sürdürülebilir iş ağı</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="basvuru">
+      <div class="wrap">
+        <div class="cta-box">
+          <div>
+            <h2>Pilot ağa ilk katılanlardan ol.</h2>
+
+            <p>
+              İşletme veya kurye olarak ilgini bildir; pilot bölge, takvim ve
+              katılım koşulları netleştiğinde seninle iletişime geçelim.
+            </p>
+          </div>
+
+          <a
+            class="btn primary"
+            href="mailto:destek@mahalledensofrana.com?subject=Mahalleden Kurye Ağı pilot başvurusu"
+          >
+            Ön talep bırak
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <span>© 2026 Mahalleden Kurye Ağı</span>
+
+      <span>
+        <a href="mailto:destek@mahalledensofrana.com">
+          destek@mahalledensofrana.com
+        </a>
+      </span>
+    </div>
+  </footer>
+</body>
+</html>
