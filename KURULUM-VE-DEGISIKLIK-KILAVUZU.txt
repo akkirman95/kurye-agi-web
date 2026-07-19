@@ -1,0 +1,133 @@
+DENİZ GROUP TAŞIMACILIK — SİTE TESLİM KILAVUZU
+================================================
+
+Bu paket, sitenin yayına hazır statik sürümüdür.
+Herhangi bir veritabanı, WordPress, yönetim paneli veya kurulum komutu gerektirmez.
+
+
+1) HANGİ DOSYALAR YÜKLENECEK?
+-----------------------------
+
+ZIP dosyasını bilgisayarda açın.
+Paketin içindeki aşağıdaki dosya ve klasörlerin TAMAMINI hostingin ana web klasörüne yükleyin:
+
+- index.html
+- 404.html
+- brand-v6.css
+- script.js
+- site.webmanifest
+- robots.txt
+- _headers
+- assets klasörü
+
+Önemli:
+- index.html dosyası doğrudan public_html, httpdocs veya wwwroot klasörünün içinde olmalıdır.
+- "deniz-group-site" klasörünü tek parça hâlinde ana klasörün içine koymayın; klasörün İÇİNDEKİ dosyaları yükleyin.
+- Eski dosyaların üzerine yazma sorusu çıkarsa "Değiştir / Üzerine yaz" seçeneğini kullanın.
+- Yüklemeden önce mevcut sitenin yedeğini indirmek güvenlidir.
+
+
+2) STANDART HOSTİNGE YÜKLEME
+----------------------------
+
+1. Hosting panelinden Dosya Yöneticisi'ni açın.
+2. public_html, httpdocs veya wwwroot isimli ana web klasörüne girin.
+3. Mevcut sitenin bir yedeğini alın.
+4. Paket içindeki tüm dosya ve klasörleri bu konuma yükleyin.
+5. ZIP'i hosting üzerinde açtıysanız, index.html dosyasının ana web klasöründe olduğundan emin olun.
+6. Siteyi gizli sekmede açıp kontrol edin.
+7. Eski görünüm gelirse tarayıcı önbelleğini ve Cloudflare önbelleğini temizleyin.
+
+
+3) GITHUB'A BAĞLI CLOUDFLARE İLE GÜNCELLEME
+-------------------------------------------
+
+Bu proje GitHub üzerinden Cloudflare'a bağlıysa:
+
+1. GitHub Desktop ile "akkirman95/kurye-agi-web" deposunu bilgisayara klonlayın.
+2. Bu paketteki dosyaları klonlanan klasörün içine kopyalayın ve eski dosyaların üzerine yazın.
+3. GitHub Desktop'ta kısa bir açıklama yazıp "Commit to main" seçeneğine basın.
+4. "Push origin" seçeneğine basın.
+5. Cloudflare yeni sürümü otomatik olarak yayınlar.
+
+
+4) METİNLERİ, TELEFONU VE İLETİŞİM BİLGİLERİNİ DEĞİŞTİRME
+---------------------------------------------------------
+
+Ana içeriklerin çoğu index.html dosyasındadır.
+Visual Studio Code ile klasörü açıp index.html içinde değişecek metni arayın.
+
+Mevcut iletişim bilgilerini aramak için:
+
+- Telefonun görünen hâli: 0 553 719 14 10
+- Telefon bağlantılarında: +905537191410
+- E-posta: denizgrouptasimacilik@gmail.com
+- Instagram: denizgrouptasimacilik
+
+Telefon değişirse hem görünen numarayı hem de "tel:" ve "wa.me" bağlantılarındaki numarayı değiştirin.
+WhatsApp bağlantısında numarayı boşluk ve başında "+" olmadan ülke koduyla yazın.
+Örnek: 905xxxxxxxxx
+
+
+5) FOTOĞRAFLARI DEĞİŞTİRME
+--------------------------
+
+Fotoğraflar assets klasöründedir.
+En kolay yöntem, yeni fotoğrafı aynı dosya adıyla ve aynı uzantıyla eskisinin üzerine kaydetmektir.
+
+- fleet-front.jpg  : Yatay araç filosu fotoğrafı (önerilen oran yaklaşık 16:10)
+- fleet-school.jpg : Dikey okul servisi fotoğrafı (önerilen oran yaklaşık 4:5)
+- fleet-trip.jpg   : Dikey tur/transfer fotoğrafı (önerilen oran yaklaşık 4:5)
+- hero-school.jpg  : Öğrenci servisi bölümündeki dikey fotoğraf
+- og-deniz-group-v6.jpg : Ana bölümdeki logo ve araç filosu görseli (1200 × 630)
+- deniz-logo-lockup.jpg : Logo kaynak görseli
+
+Yeni fotoğrafları mümkünse JPG olarak, web için sıkıştırılmış ve 2 MB'tan küçük kullanın.
+Dosya adlarında Türkçe karakter ve boşluk kullanmayın.
+
+
+6) RENKLERİ VE TASARIMI DEĞİŞTİRME
+---------------------------------
+
+Tasarım dosyası brand-v6.css dosyasıdır.
+Dosyanın başındaki ":root" bölümünde ana renkler yer alır:
+
+- --navy: #0d1b3d
+- --navy-deep: #08132c
+- --graphite: #1f2937
+- --steel: #a6adb4
+- --white: #ffffff
+
+Sadece metin ve fotoğraf değişikliği için CSS dosyasına dokunmak gerekmez.
+Mobil görünüm kuralları dosyanın alt tarafındaki "@media" bölümlerindedir.
+
+
+7) BİLGİSAYARDA ÖNİZLEME
+------------------------
+
+Önerilen yöntem:
+
+1. Visual Studio Code'u açın.
+2. Site klasörünü açın.
+3. "Live Server" eklentisini kurun.
+4. index.html dosyasına sağ tıklayıp "Open with Live Server" seçeneğini kullanın.
+5. Hem normal tarayıcı genişliğinde hem de telefon görünümünde kontrol edin.
+
+
+8) DEĞİŞİKLİKTEN SONRA KONTROL LİSTESİ
+--------------------------------------
+
+- Ana sayfa açılıyor mu?
+- Logo hem masaüstünde hem mobilde düzgün mü?
+- Menü bağlantıları çalışıyor mu?
+- Telefon ve WhatsApp butonları doğru numarayı açıyor mu?
+- E-posta ve Instagram bağlantıları doğru mu?
+- Fotoğraflar uzamadan ve taşmadan görünüyor mu?
+- Sayfanın altında beyaz boşluk oluşuyor mu?
+
+
+Canlı site:
+https://mahalledensofrana.com.tr
+
+Kaynak kod:
+https://github.com/akkirman95/kurye-agi-web
