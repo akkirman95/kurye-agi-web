@@ -10,7 +10,7 @@
 /assets/*
   Cache-Control: public, max-age=604800, stale-while-revalidate=86400
 
-/styles.css
+/brand.css
   Cache-Control: public, max-age=3600, must-revalidate
 
 /script.js

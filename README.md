@@ -2,10 +2,12 @@
 
 Deniz Group Taşımacılık için hazırlanan, Cloudflare Pages üzerinde yayınlanan statik kurumsal site.
 
+Marka sistemi; `#0D1B3D`, `#1F2937`, `#A6ADB4` ve `#FFFFFF` renkleri, Montserrat başlıklar, Poppins metinler ve çizgisel ikonografi üzerine kuruludur.
+
 ## Yapı
 
 - `index.html`: Semantik tek sayfa kurumsal içerik ve yapılandırılmış veri
-- `styles.css`: Responsive tasarım sistemi
+- `brand.css`: Montserrat ve Poppins tabanlı responsive marka sistemi
 - `script.js`: Mobil menü, görünürlük animasyonları, SSS ve WhatsApp teklif akışı
 - `assets/`: Marka ve operasyon görselleri
 - `_headers`: Cloudflare güvenlik ve önbellek başlıkları
