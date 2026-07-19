@@ -303,44 +303,42 @@ ol {
   min-width: max-content;
   display: inline-flex;
   align-items: center;
-  gap: 13px;
+  gap: 12px;
   color: var(--navy);
 }
 
 .brand-mark {
-  width: 48px;
-  height: 48px;
+  width: 54px;
+  height: 54px;
+  flex: 0 0 auto;
   color: currentColor;
   fill: currentColor;
 }
 
+.brand-divider {
+  width: 1px;
+  height: 50px;
+  flex: 0 0 auto;
+  background: currentColor;
+  opacity: 0.52;
+}
+
 .brand-type {
-  min-width: 132px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  gap: 1px;
   color: currentColor;
-  line-height: 1;
+  line-height: 0.98;
   text-transform: uppercase;
 }
 
 .brand-type strong {
-  width: 100%;
-  padding-bottom: 5px;
   color: currentColor;
-  border-bottom: 1.5px solid currentColor;
-  font-size: 22px;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  text-align: center;
-}
-
-.brand-type > span {
-  margin-top: 5px;
-  font-size: 8px;
-  font-weight: 600;
-  letter-spacing: 0.56em;
-  text-indent: 0.56em;
+  font-size: 13px;
+  font-weight: 750;
+  letter-spacing: 0.025em;
+  white-space: nowrap;
 }
 
 .main-nav {
@@ -668,7 +666,7 @@ ol {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: left center;
 }
 
 .hero-image-shade {
@@ -722,7 +720,7 @@ ol {
 
 .hero-badge-service {
   top: -26px;
-  left: -22px;
+  right: 24px;
 }
 
 .badge-icon {
@@ -2509,24 +2507,21 @@ ol {
   }
 
   .brand {
-    gap: 9px;
+    gap: 8px;
   }
 
   .brand-mark {
-    width: 42px;
-    height: 42px;
+    width: 44px;
+    height: 44px;
   }
 
-  .brand-type {
-    min-width: 112px;
+  .brand-divider {
+    height: 41px;
   }
 
   .brand-type strong {
-    font-size: 18px;
-  }
-
-  .brand-type > span {
-    font-size: 7px;
+    font-size: 10px;
+    letter-spacing: 0.02em;
   }
 
   .hero-grid {
