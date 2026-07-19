@@ -157,7 +157,6 @@ h3,
 strong,
 .button,
 .main-nav,
-.brand-type,
 .eyebrow {
   font-family: "Montserrat", Arial, sans-serif;
 }
@@ -303,42 +302,16 @@ ol {
   min-width: max-content;
   display: inline-flex;
   align-items: center;
-  gap: 12px;
   color: var(--navy);
 }
 
-.brand-mark {
+.brand-monogram {
   width: 54px;
   height: 54px;
   flex: 0 0 auto;
-  color: currentColor;
-  fill: currentColor;
-}
-
-.brand-divider {
-  width: 1px;
-  height: 50px;
-  flex: 0 0 auto;
-  background: currentColor;
-  opacity: 0.52;
-}
-
-.brand-type {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1px;
-  color: currentColor;
-  line-height: 0.98;
-  text-transform: uppercase;
-}
-
-.brand-type strong {
-  color: currentColor;
-  font-size: 13px;
-  font-weight: 750;
-  letter-spacing: 0.025em;
-  white-space: nowrap;
+  display: block;
+  object-fit: cover;
+  object-position: left center;
 }
 
 .main-nav {
@@ -1605,11 +1578,11 @@ ol {
   border-radius: 50%;
 }
 
-.vision-seal svg {
+.vision-seal img {
   width: 53px;
   height: 53px;
-  color: var(--white);
-  fill: currentColor;
+  object-fit: cover;
+  object-position: left center;
 }
 
 .vision-seal span {
@@ -2506,22 +2479,9 @@ ol {
     gap: 0;
   }
 
-  .brand {
-    gap: 8px;
-  }
-
-  .brand-mark {
-    width: 44px;
-    height: 44px;
-  }
-
-  .brand-divider {
-    height: 41px;
-  }
-
-  .brand-type strong {
-    font-size: 10px;
-    letter-spacing: 0.02em;
+  .brand-monogram {
+    width: 48px;
+    height: 48px;
   }
 
   .hero-grid {
