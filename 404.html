@@ -1,98 +1,25 @@
 <!doctype html>
 <html lang="tr">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex,nofollow">
-
-  <title>Sayfa bulunamadı | Mahalleden Kurye Ağı</title>
-
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      margin: 0;
-      padding: 24px;
-      color: #28231f;
-      background: #f8f3ea;
-      font-family: Manrope, Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
-    }
-
-    .box {
-      width: min(620px, 100%);
-      padding: 42px;
-      text-align: center;
-      border: 1px solid #e8ddce;
-      border-radius: 30px;
-      background: #fffdf9;
-      box-shadow: 0 22px 60px rgba(40, 35, 31, 0.1);
-    }
-
-    .number {
-      color: #ef5a2a;
-      font-size: clamp(76px, 18vw, 112px);
-      font-weight: 900;
-      line-height: 1;
-      letter-spacing: -0.06em;
-    }
-
-    h1 {
-      margin: 14px 0 12px;
-      font-size: clamp(28px, 6vw, 38px);
-      line-height: 1.1;
-      letter-spacing: -0.04em;
-    }
-
-    p {
-      margin: 0;
-      color: #6c625b;
-      font-size: 17px;
-      line-height: 1.6;
-    }
-
-    a {
-      min-height: 50px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 24px;
-      padding: 0 23px;
-      border-radius: 999px;
-      color: #fff;
-      background: #236247;
-      text-decoration: none;
-      font-weight: 800;
-    }
-
-    a:hover {
-      background: #194b36;
-    }
-
-    @media (max-width: 520px) {
-      .box {
-        padding: 34px 22px;
-      }
-    }
-  </style>
-</head>
-
-<body>
-  <main class="box">
-    <div class="number">404</div>
-
-    <h1>Bu rota henüz oluşturulmadı.</h1>
-
-    <p>
-      Aradığınız sayfa bulunamadı. Kurye ağı ana sayfasına dönerek pilot
-      hakkında bilgi alabilirsiniz.
-    </p>
-
-    <a href="/">Ana sayfaya dön</a>
-  </main>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#071321">
+    <title>Sayfa bulunamadı | Deniz Group Taşımacılık</title>
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body class="error-page">
+    <main class="error-shell">
+      <a class="brand brand-light" href="/" aria-label="Deniz Group Taşımacılık ana sayfa">
+        <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true"><path d="M8 10h43c23.5 0 41 17.1 41 40S74.5 90 51 90H8V60h39c6.4 0 11-4.3 11-10s-4.6-10-11-10H8V10Z"/></svg>
+        <span class="brand-type"><strong>Deniz Group</strong><span>Taşımacılık</span></span>
+      </a>
+      <div class="error-code" aria-hidden="true">404</div>
+      <p class="eyebrow eyebrow-light"><span></span> Bu rota bulunamadı</p>
+      <h1>Doğru güzergâha<br>birlikte dönelim.</h1>
+      <p>Aradığınız sayfa taşınmış veya artık kullanımda olmayabilir.</p>
+      <a class="button button-primary" href="/">Ana sayfaya dön <span aria-hidden="true">→</span></a>
+    </main>
+  </body>
 </html>

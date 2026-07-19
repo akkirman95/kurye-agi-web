@@ -1,0 +1,17 @@
+{
+  "name": "Deniz Group Taşımacılık",
+  "short_name": "Deniz Group",
+  "description": "Balıkesir'de profesyonel servis taşımacılığı.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#071321",
+  "theme_color": "#071321",
+  "icons": [
+    {
+      "src": "/assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
