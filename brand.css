@@ -2410,6 +2410,27 @@ ol {
     max-width: 700px;
   }
 
+  .fleet-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .fleet-shots {
+    min-height: 0;
+    display: block;
+  }
+
+  .fleet-shot-one {
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .fleet-shot-two,
+  .fleet-shot-three {
+    display: none;
+  }
+
   .vision-card {
     padding: 62px 54px;
     grid-template-columns: 0.12fr 1fr;
@@ -2447,6 +2468,17 @@ ol {
 
   .footer-social {
     grid-column: 1 / -1;
+  }
+
+  .floating-whatsapp {
+    width: 52px;
+    padding: 0;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+  .floating-whatsapp span {
+    display: none;
   }
 }
 
@@ -2527,6 +2559,8 @@ ol {
 
   .hero-visual {
     width: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
   .hero-image-wrap {
@@ -2539,13 +2573,13 @@ ol {
   }
 
   .hero-badge-location {
-    right: -8px;
-    bottom: -28px;
+    position: static;
+    align-self: flex-end;
+    margin-top: 12px;
   }
 
   .hero-badge-service {
-    top: -26px;
-    left: -8px;
+    display: none;
   }
 
   .hero-badge strong {
@@ -2678,11 +2712,20 @@ ol {
   }
 
   .fleet-main {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 6 / 5;
+  }
+
+  .fleet-main img {
+    object-position: 50% 50%;
   }
 
   .fleet-shots {
-    min-height: 430px;
+    min-height: 0;
+  }
+
+  .fleet-shot-one {
+    min-height: 0;
+    aspect-ratio: 1 / 1;
   }
 
   .fleet-main figcaption {
@@ -2808,8 +2851,7 @@ ol {
   }
 
   .hero-badge-location {
-    right: 8px;
-    bottom: -32px;
+    margin-top: 12px;
   }
 
   .standards-grid {
