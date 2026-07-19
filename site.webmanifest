@@ -8,9 +8,9 @@
   "theme_color": "#0D1B3D",
   "icons": [
     {
-      "src": "/assets/deniz-monogram.jpg",
-      "sizes": "178x176",
-      "type": "image/jpeg",
+      "src": "/assets/favicon-v5.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
       "purpose": "any maskable"
     }
   ]
